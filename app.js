@@ -17,7 +17,7 @@ app.engine( 'html', hbs.express4({
     partialsDir: __dirname + '/views/partials',
     defualtLayout: __dirname + '/views/layout.html'
 });
-//ch
+
 // uncomment after placing your favicon in /public
 //app.use(favicon(path.join(__dirname, 'public', 'favicon.ico')));
 app.use(logger('dev'));
