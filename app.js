@@ -7,7 +7,7 @@ var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
 
 var routes = require('./routes/index');
-var users = require('./routes/users');
+
 
 var app = express();
 
@@ -28,7 +28,7 @@ app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
 app.use('/', routes);
-app.use('/users', users);
+
 
 
 app.set('env', 'development' );
@@ -67,5 +67,6 @@ app.use(function(err, req, res, next) {
 
 module.exports = app;
 
-
-app.listen('8080');
+var port = 8080;
+app.listen(port);
+console.log("App running on "+ port );

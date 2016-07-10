@@ -3,7 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Express' });
+  res.render('index');
+});
+
+router.get( '/spanish', function( req, res ){
+    console.log("Adios Amigos");
+    res.render('indexSpanish');
 });
 
 module.exports = router;
