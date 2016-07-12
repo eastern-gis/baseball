@@ -3,10 +3,12 @@ var router = express.Router();
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index',{
-      title: 'Baseball',
-      rootPath: '../'
-  });
+    console.log("Served.");
+  res.render('index');//{
+     // title: 'Baseball',
+     // rootPath: '../'
+ // });
+    console.log("Done render");
 });
 
 router.get( '/spanish', function( req, res ){

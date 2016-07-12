@@ -31,7 +31,7 @@ app.use('/', routes);
 
 
 
-app.set('env', 'development' );
+
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
@@ -58,8 +58,8 @@ if (app.get('env') === 'development') {
 // no stacktraces leaked to user
 app.use(function(err, req, res, next) {
   res.status(err.status || 500);
-  res.render('ERRRRRROOOOORRRR', {
-    message: err.message + "bigbig",
+  res.render(err, {
+    message: err.message,
     error: {}
   });
 });
