@@ -63,18 +63,5 @@ carl.whoAmI();
 //They both have the name John now.
 
 
-
-// Running Test jQuery
-$('#spanishFlag').hover(
-        function(){
-            $('#englishDiv').fadeOut('normal');
-
-        },
-        function(){
-            console.log('B');
-            $('#englishDiv').fadeIn('normal');
-        });
-
-
     
     
