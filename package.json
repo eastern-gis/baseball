@@ -16,6 +16,11 @@
     "serve-favicon": "~2.3.0",
     "grunt": "~1.0.1",
     "grunt-contrib-watch" : "*",
-    "grunt-contrib-concat" : "*"
+    "grunt-contrib-concat" : "*",
+    "backbone" : "*",
+    "d3" : "*",
+    "leaflet" : "*",
+    "fullpage.js" : "*",
+    "bootstrap" : "*"
   }
 }
