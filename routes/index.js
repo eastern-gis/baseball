@@ -14,4 +14,7 @@ router.get( '/spanish', function( req, res ){
     res.render('indexSpanish');
 });
 
+
+
+
 module.exports = router;
