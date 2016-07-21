@@ -67,12 +67,14 @@ carl.whoAmI();
 // Running Test jQuery
 $('#spanishFlag').hover(
         function(){
-            $('#textRep').fadeOut('normal');
+            // $('#textRep').fadeOut('normal');
+            console.log('A');
+            $('#textRep').load('views/translation');
 
         },
         function(){
+            // $('#textRep').fadeIn('normal');
             console.log('B');
-            $('#textRep').fadeIn('normal');
         });
 
 

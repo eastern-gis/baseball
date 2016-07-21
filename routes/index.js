@@ -15,6 +15,10 @@ router.get( '/spanish', function( req, res ){
 });
 
 
+router.get('/translation', function(req, res){
+	console.log('Translation?');
+	res.render('indexSpanish_John');
+})
 
 
 module.exports = router;
