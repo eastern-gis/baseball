@@ -25,8 +25,20 @@ router.get('/data', function( req, res ){
 	'@' + config.host + ":" +config.port + "/" +config.db;
     console.log( connectionString );
     var client = new Client( connectionString );
-    console.log( client );
-       
+//    console.log( client );
+    client.connect( function(err){
+	if (err)
+	    console.log("DB Connection Error ", err );
+	client.query('SELECT * FROM "a1993";',[], function( err, result ){
+	    if( err )
+		console.log("Query Error: ", err );
+	    else
+		res.json( result );
+	    
+	});
+	
+    });
+    console.log("Done data routing");
 });
 
 module.exports = router;
