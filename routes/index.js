@@ -18,8 +18,8 @@ router.get( '/spanish', function( req, res ){
 });
 
 router.get('/data', function( req, res ){
-    console.log('Get data', pg );
-    
+    console.log('Get data' );
+    console.log( config );
     
 });
 

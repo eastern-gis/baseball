@@ -1,9 +1,9 @@
 node_modules/*
 *~
+/bin/*.js
 *#
 sourceData/*
 sourceData
 *.shp
 *.prj
 *.xml
-*./bin/*.js
