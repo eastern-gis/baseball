@@ -6,3 +6,4 @@ sourceData
 *.shp
 *.prj
 *.xml
+*./bin/*.js

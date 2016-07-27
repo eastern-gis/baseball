@@ -21,6 +21,8 @@
     "d3" : "*",
     "leaflet" : "*",
     "fullpage.js" : "*",
-    "bootstrap" : "*"
+      "bootstrap" : "*",
+      "pg":"*"
+      
   }
 }
