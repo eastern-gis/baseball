@@ -1,7 +1,8 @@
 var express = require('express');
 var router = express.Router();
 var pg = require('pg');
-var config = require('./bin/config');
+var config = require('../bin/config.js');
+var Client = pg.Client;
 /* GET home page. */
 router.get('/', function(req, res, next) {
     console.log("Served.");
@@ -20,7 +21,12 @@ router.get( '/spanish', function( req, res ){
 router.get('/data', function( req, res ){
     console.log('Get data' );
     console.log( config );
-    
+    var connectionString = 'pg://'+ config.uname + ':' + config.psk +
+	'@' + config.host + ":" +config.port + "/" +config.db;
+    console.log( connectionString );
+    var client = new Client( connectionString );
+    console.log( client );
+       
 });
 
 module.exports = router;
