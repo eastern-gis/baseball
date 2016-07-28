@@ -29,10 +29,11 @@ router.get('/data', function( req, res ){
     client.connect( function(err){
 	if (err)
 	    console.log("DB Connection Error ", err );
-	client.query('SELECT * FROM "a1993";',[], function( err, result ){
+	client.query('SELECT ST_AsGeoJSON( geom ), aff_1993 FROM "a1993";',[], function( err, result ){
 	    if( err )
 		console.log("Query Error: ", err );
 	    else
+		console.log("Returning json", result );
 		res.json( result );
 	    
 	});

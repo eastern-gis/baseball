@@ -7,12 +7,12 @@ module.exports = function(grunt){
 		seperator: ':'
 		},
 	    dist:{
-		src:['./public/js/utils/*.js','public/js/test/*.js','./public/js/*.js'],
+		src:['./public/js/utils/*.js','public/js/collections/*.js','./public/js/views/*.js','./public/js/*.js'],
 		dest:'./public/build/baseball.js'
 	    }
 	},
 	watch: {
-	    files:['./public/js/*.js','./public/js/test/*.js'],
+	    files:['./public/js/*.js','./public/js/collections/*.js','./public/js/views/*.js'],
 	    tasks: ['concat']
 	}
     });

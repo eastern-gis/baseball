@@ -7,6 +7,7 @@
   <link rel="stylesheet" href="../lib/bootstrap/dist/css/bootstrap.css"></link>
   <link rel="stylesheet" href="../lib/fullpage.js/jquery.fullPage.css" ></link>
   <link rel="stylesheet" href="../lib/leaflet/dist/leaflet.css" ></link>
+  <link rel="stylesheet" href="../stylesheets/style.css" ></link>
 </head>
 <body>
   {{{body}}}
@@ -25,7 +26,19 @@
 
 
 <script>
-$('#fullpage').fullpage();
+  $(function(){
+  $('#fullpage').fullpage({
+  lockAnchors: false,
+  anchors:['firstPage', 'secondPage'],
+  navigation: true,
+  navigationPosition: 'right',
+  navigationTooltips: ['firstSlide', 'secondSlide'],
+  showActiveTooltip: false
+
+  });
+  if( typeof startBaseballApp == 'function' )
+  startBaseballApp();
+  });
 </script>
  
 </html>
